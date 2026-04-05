@@ -1,0 +1,8 @@
+# DVC Pipeline Configuration
+stages:
+  prepare:
+    cmd: python src/data/prepare.py
+    deps:
+      - data/raw/
+    outs:
+      - data/processed/
